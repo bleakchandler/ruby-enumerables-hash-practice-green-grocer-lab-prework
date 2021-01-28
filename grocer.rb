@@ -120,8 +120,7 @@ def checkout(cart, coupons)
     total += (consolidated_cart_with_coupoins_and_clearance[item][:count] * consolidated_cart_with_coupoins_and_clearance[item][:price])
     
   end 
- if total > 100
-    total = total * 0.9
+    total = total * 0.9 if total > 100
 end
   total
 
