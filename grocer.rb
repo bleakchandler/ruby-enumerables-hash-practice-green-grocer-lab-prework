@@ -110,34 +110,34 @@ end
 
 
 #def checkout(cart, coupons)
- # total = 0
-  #consolidated_cart = consolidate_cart(cart)
-  #consolidated_cart_with_coupons = apply_coupons(consolidated_cart, coupons)
-  #consolidated_cart_with_coupoins_and_clearance = apply_clearance(consolidated_cart_with_coupoins_and_clearance)
+  total = 0
+  consolidated_cart = consolidate_cart(cart)
+  consolidated_cart_with_coupons = apply_coupons(consolidated_cart, coupons)
+  consolidated_cart_with_coupoins_and_clearance = apply_clearance(consolidated_cart_with_coupoins_and_clearance)
   
   
-   # consolidated_cart_with_coupoins_and_clearance.each do |item, details| 
-    #total += (details[:price] * details[:count])
+   consolidated_cart_with_coupoins_and_clearance.each do |item, details| 
+    total += (consolidated_cart_with_coupoins_and_clearance[item][:count] * consolidated_cart_with_coupoins_and_clearance[item][:price]
     
-  #end 
- # if total > 100
-#    total = total * 0.9
-#  end
-#  total
+  end 
+ if total > 100
+    total = total * 0.9
+end
+  total
 
-# end
+ end
 
 #another way:
-def checkout(cart,coupons)
-  total = 0
-  updated_cart = consolidate_cart(cart)
-  updated_cart = apply_coupons(updated_cart, coupons)
-  updated_cart = apply_clearance(updated_cart)
-  updated_cart.each do |item, details|
-    total = total + (updated_cart[item][:count] * updated_cart[item][:price])
-  end
-  if total > 100
-    total = total * 0.9
-  end
-  total
-end
+#def checkout(cart,coupons)
+ # total = 0
+#  updated_cart = consolidate_cart(cart)
+ # updated_cart = apply_coupons(updated_cart, coupons)
+#  updated_cart = apply_clearance(updated_cart)
+ # updated_cart.each do |item, details|
+  #  total = total + (updated_cart[item][:count] * updated_cart[item][:price])
+#  end
+#  if total > 100
+ #   total = total * 0.9
+#  end
+ # total
+#end
