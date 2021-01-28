@@ -117,7 +117,7 @@ end
   
   
    consolidated_cart_with_coupoins_and_clearance.each do |item, details| 
-    total += (consolidated_cart_with_coupoins_and_clearance[item][:count] * consolidated_cart_with_coupoins_and_clearance[item][:price]
+    total += (consolidated_cart_with_coupoins_and_clearance[item][:count] * consolidated_cart_with_coupoins_and_clearance[item][:price])
     
   end 
  if total > 100
