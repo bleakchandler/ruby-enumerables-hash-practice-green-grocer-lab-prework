@@ -29,7 +29,7 @@ def apply_coupons(cart, coupons)
          #p cart
         else
           cart["#{item_name} W/COUPON"][:count] += coupon[:num]
-          cart[coupon[:item]][:count] -= coupon[:num]
+      
           p "there are #{cart["#{item_name} W/COUPON"][:count]} applied"
           
         end
